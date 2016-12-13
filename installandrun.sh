@@ -4,6 +4,7 @@ npm install hapi
 npm install express
 npm install restify
 npm install koa
+npm install bluebird
 npm install n
 npm install total.js
 n install latest
