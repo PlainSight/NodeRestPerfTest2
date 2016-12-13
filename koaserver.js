@@ -1,3 +1,4 @@
+global.Promise = require('bluebird');
 var koa = require('koa');
 var app = koa();
 
