@@ -6,6 +6,7 @@ npm install restify
 npm install koa
 npm install n
 npm install total.js
+npm install -g micro
 n install latest
 n latest
 
@@ -38,4 +39,9 @@ sleep 5
 echo total.js >> results.txt ;
 node totalserver/total.js & sleep 5 ; ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:8000/ | grep "Requests per second:" >> results.txt ;
 pkill -f total ;
+sleep 5
+
+echo micro >> results.txt ;
+micro microserver.js & sleep 5 ; ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:3000/ | grep "Requests per second:" >> results.txt ;
+pkill -f node ;
 sleep 5
